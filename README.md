@@ -1,6 +1,6 @@
 # wallet_z
 
-A new Flutter project.
+Wallet-Z is an android cryptocurrency wallet and transaction application.
 
 ## Getting Started
 
