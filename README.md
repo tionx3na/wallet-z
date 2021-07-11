@@ -1,6 +1,6 @@
-# Wallet-Z: Crypto Wallet 
+# Wallet-Z: A Crypto Wallet 
 
-Since the advent of cryptocurrencies, it has become a must to have wallets to store the digital currencies. **Wallet-Z** is one such wallet to store your cryptocurrencies on a mobile platform. 
+Since the advent of cryptocurrencies, it has become a must to have wallets to store the digital currencies. **Wallet-Z** is one such wallet to store your cryptocurrencies on a mobile platform. This wallet is one of my projects on flutter mobile app development. My aim is to create a multi cryptocurrency wallet that can securely hold all your digital currencies in your mobile phones. The primary focus is on the security and the user experience of the application.
 
 ## Getting Started
 
