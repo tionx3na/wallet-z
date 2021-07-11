@@ -1,6 +1,6 @@
 # wallet_z
 
-Wallet-Z is an android cryptocurrency wallet and transaction application.
+Since the advent of cryptocurrencies, it has become a must to have wallets to store the digital currencies. **Wallet-Z** is one such wallet to store your cryptocurrencies on a mobile platform. 
 
 ## Getting Started
 
