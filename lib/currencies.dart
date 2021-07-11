@@ -6,20 +6,17 @@ class Currencies extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
      child: DraggableScrollableSheet(
-       initialChildSize: 0.5,
-       minChildSize: 0.3,
-       maxChildSize: 0.7,
+        initialChildSize: 0.5,
+        minChildSize: 0.3,
+        maxChildSize: 0.7,
         builder: (BuildContext context, myscrollController) {
         return Container(
           color: Colors.grey.shade900,
-          child: ListView.builder(
-          controller: myscrollController,
-          itemCount: 25,
-          itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: MediaQuery.of(context).size.height,
+          child: Container(
+                height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
-                child: ListView(
+                child: ListView(      
+                  controller: myscrollController,
                   children: <Widget>[
                     cryptoPortfolioItem(Icons.account_balance, "BTC", 410.80,
                         0.0036, "82.19(92%)"),
@@ -41,15 +38,15 @@ class Currencies extends StatelessWidget {
                         23000, "120(3.6%)"),
                   ],
                 ),
-          );
+          ));
         },
       ),
     );
-  },
-  )
-  ) ;
   }
-}
+  
+
+  }
+
 
 
 cryptoPortfolioItem(IconData icon, String name, double amount, double rate,
@@ -61,7 +58,7 @@ cryptoPortfolioItem(IconData icon, String name, double amount, double rate,
             child: Container(
               padding: EdgeInsets.only(top: 15.0, bottom: 15.0, right: 15.0),
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black,
                   borderRadius: BorderRadius.circular(22.0)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -80,12 +77,13 @@ cryptoPortfolioItem(IconData icon, String name, double amount, double rate,
                             Text(
                               name,
                               style: TextStyle(
-                                  fontSize: 18.0, fontWeight: FontWeight.bold),
+                                  fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.orange),
                             ),
                             Text("\$$amount",
                                 style: TextStyle(
                                     fontSize: 16.0,
-                                    fontWeight: FontWeight.bold))
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white))
                           ],
                         ),
                         Row(
@@ -94,7 +92,8 @@ cryptoPortfolioItem(IconData icon, String name, double amount, double rate,
                             Text("$rate BTC",
                                 style: TextStyle(
                                     fontSize: 13.0,
-                                    fontWeight: FontWeight.normal)),
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.white)),
                             Text("+ \$$percentage",
                                 style: TextStyle(
                                   fontSize: 14.0,
