@@ -20,7 +20,7 @@ class TopBar extends StatelessWidget {
                     Icons.menu,
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () => { Scaffold.of(context).openDrawer() },
                   ),
                   Text(
                     "PORTFOLIO",
@@ -107,3 +107,4 @@ class CurvePainter extends CustomPainter{
   }
 
 }
+
