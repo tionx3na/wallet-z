@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'currencies.dart';
 
+ 
 class Profile extends StatelessWidget {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       drawer: MyDrawer(),
       body: Container(
         color: Colors.grey.shade900,
         child: Stack(
           children: <Widget> [
+
             Positioned(
               top: 0.0,
               child: Container(
@@ -41,6 +45,42 @@ class Profile extends StatelessWidget {
               )
            ),
 
+           Positioned(
+              child: IconButton(
+                  icon: Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                  ),
+               onPressed: () { _scaffoldKey.currentState?.openDrawer(); }
+              ),
+           ),
+
+             Positioned(
+              top: 10.0,
+              right: 10.0,
+              child: FloatingActionButton.extended(
+                heroTag: "btn1",
+                onPressed:  () {},
+                backgroundColor: Colors.grey.shade900,
+                foregroundColor: Colors.white,
+                icon: Icon(Icons.edit),
+                label: Text("EDIT"),
+                ),
+            ),
+
+            Positioned(
+              top: 250.0,
+              right: 55.0,
+              child: FloatingActionButton(
+                heroTag: "btn2",
+                onPressed:  () {},
+                backgroundColor: Colors.pink,
+                foregroundColor: Colors.white,
+                child: Icon(Icons.edit),
+                mini: true,
+                ),
+            ),
+
           Positioned(        
             bottom: 0,
             child: Container(
@@ -69,6 +109,7 @@ class Profile extends StatelessWidget {
                     userPortfolio(Icons.verified_user, "USERNAME:", "@1runx3na",),
                     userPortfolio(Icons.verified_user, "TOTAL:", r"$ 400",),
                     userPortfolio(Icons.verified_user, "SIGN IN:", r"30/04/2021",),
+                    
                    
                   ],
                 )
@@ -90,7 +131,7 @@ userPortfolio(IconData icon, String divname, String div) =>
           child: InkWell(
             onTap: () => print("tapped"),
             child: Container(
-              height: 100.0,
+              height: 120.0,
               padding: EdgeInsets.only(top: 15.0, bottom: 15.0, right: 15.0),
               decoration: BoxDecoration(
                   color: Colors.black,
@@ -98,7 +139,7 @@ userPortfolio(IconData icon, String divname, String div) =>
               child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Row(
+                        Wrap(
                           children: <Widget>[
                             Padding(
                               padding: EdgeInsets.only(left: 5.0, right: 10.0),
@@ -107,17 +148,16 @@ userPortfolio(IconData icon, String divname, String div) =>
 
                             Padding(
                              padding: EdgeInsets.only(left: 5.0, right: 5.0), 
-                             child: Text(
-                                divname,
-                                style: TextStyle(
-                                    fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.orange),
+                              child: Text(
+                                  divname,
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.orange),
+                                ),
                               ),
-                            ),
                             
                             Padding(
                               padding: EdgeInsets.only(left: 5.0, right: 5.0), 
                               child: Text(div,
-                              
                                   style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
