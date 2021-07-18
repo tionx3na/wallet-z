@@ -88,11 +88,21 @@ class News extends StatelessWidget {
           ),
         
         Positioned(
-          top: 0.0,
-          bottom: 0.0,
+          top: MediaQuery.of(context).size.height/2,
+          bottom:  0.0,
           left: 0.0,
           right: 0.0,
-          child: Container()
+          child: Container(
+            child: ListView(
+              children: <Widget>[
+                for (int i=1; i<50; i++)
+                  Container(
+                    color: Colors.cyan,
+                    child: Text("News ${i}"),
+                  ),
+
+              ],),
+          )
         )
 
 
@@ -101,3 +111,4 @@ class News extends StatelessWidget {
     );
   }
 }
+
