@@ -30,6 +30,72 @@ class News extends StatelessWidget {
               )
             )
           ),
+
+          Positioned(
+            top: MediaQuery.of(context).size.height/7.5,
+            bottom: MediaQuery.of(context).size.height/2,
+            left: 0.0,
+            right: 0.0,
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 24.0),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+              Container(  
+                width: MediaQuery.of(context).size.width/1.2,
+                color: Colors.red,
+                child: Text(
+                  "Image holder",
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                ),
+              ),
+              
+              Container(
+                width: MediaQuery.of(context).size.width/1.2,
+                color: Colors.blue,
+                 child: Text(
+                  "Image holder",
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width/1.2,
+                color: Colors.green,
+                 child: Text(
+                  "Image holder",
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width/1.2,
+                color: Colors.yellow,
+                 child: Text(
+                  "Image holder",
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width/1.2,
+                color: Colors.orange,
+                 child: Text(
+                  "Image holder",
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                ),
+              ),
+                ],
+              ),
+            )
+          ),
+        
+        Positioned(
+          top: 0.0,
+          bottom: 0.0,
+          left: 0.0,
+          right: 0.0,
+          child: Container()
+        )
+
+
         ],
       )
     );
